@@ -64,7 +64,7 @@ const {
       <ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto text-xl md:text-base">
         {
           links.map(({ text, href, links }) => (
-            <li class={links?.length ? 'dropdown' : ''}>
+            <li class={links?.length ? '' : ''}>
               {links?.length ? (
                 <>
                   <button class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out">
@@ -100,7 +100,7 @@ const {
       <div class="hidden items-center md:flex">
         {showToggleTheme && <ToggleTheme iconClass="w-5 h-5" />}
 
-        {
+        <!-- {
           showRssFeed && (
             <a
               class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
@@ -110,7 +110,7 @@ const {
               <Icon name="tabler:rss" class="w-5 h-5" />
             </a>
           )
-        }
+        } -->
         {
           actions?.length ? (
             <span class="ml-4">
@@ -120,9 +120,9 @@ const {
                     'btn ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm',
                     { 'btn-ghost': type === 'ghost', 'btn-primary': type === 'primary' },
                   ]}
-                  href={href}
+                  href='#'
                 >
-                  <Fragment set:html={text} />
+                  <Fragment set:html="Get Started" />
                 </a>
               ))}
             </span>

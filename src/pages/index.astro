@@ -5,10 +5,9 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
+// import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import LatestPosts from '~/components/blog/LatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
@@ -24,12 +23,12 @@ const meta = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    callToAction={{ text: 'Get template', href: 'https://github.com/onwidget/astrowind', icon: 'tabler:download' }}
+    callToAction={{ text: 'Get Started', href: '#', icon: 'tabler:rocket' }}
     callToAction2={{ text: 'Learn more', href: '#features' }}
-    image={{ src: import('~/assets/images/hero.png'), alt: 'AstroWind Hero Image' }}
+    image={{ src: import('~/assets/images/hero.jpg'), alt: 'MagicPitch Hero Image' }}
   >
     <Fragment slot="title">
-      Welcome to <span class="hidden xl:inline">MAGICPITCH</span>
+      Welcome to <span class="xl:inline">MAGICPITCH</span>
     </Fragment>
 
     <Fragment slot="subtitle">
@@ -110,11 +109,6 @@ const meta = {
       alt: 'Colorful Image',
     }}
   >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Ad vix debet docendi</h3>
-      Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod
-      tacimates.
-    </Fragment>
   </Content>
 
   <!-- Content Widget **************** -->
@@ -151,7 +145,7 @@ const meta = {
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    title="Get your business aup and running with MagicPitch"
     items={[
       {
         title: 'Step 1: <span class="font-medium">Sign Up</span>',
@@ -184,7 +178,7 @@ const meta = {
 
   <!-- Features2 Widget ************** -->
 
-  <Features2
+  <!-- <Features2
     title="Most used widgets"
     subtitle="Provides frequently used components for building websites using Tailwind CSS"
     highlight="Components"
@@ -244,23 +238,11 @@ const meta = {
         icon: 'icon-park:page-template',
       },
     ]}
-  />
+  /> -->
 
   <!-- HighlightedPosts Widget ******* -->
 
-  <LatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
-    postIds={[
-      'get-started-website-with-astro-tailwind-css.md',
-      'how-to-customize-astrowind-to-your-brand.md',
-      'useful-resources-to-create-websites.md',
-      'astrowind-template-in-depth.md',
-    ]}
-  />
+  
 
   <!-- FAQs Widget ******************* -->
 
@@ -271,36 +253,36 @@ const meta = {
     items={[
       [
         {
-          question: 'What do I need to start?',
+          question: 'How does MagicPitch generate B2B leads?',
           answer:
-            'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+            'MagicPitch generates B2B leads through a combination of our vast in-house database of verified contacts and advanced AI algorithms. We analyze the data to identify and target high-quality leads based on specific criteria and deliver personalized pitches to engage with them effectively.',
         },
         {
-          question: 'How to install the Astro + Tailwind CSS template?',
+          question: 'What sets MagicPitch apart from other lead generation services?',
           answer:
-            "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.",
+            "MagicPitch stands out due to our hyper-personalized approach and extensive database. Our AI algorithms allow us to tailor messaging and pitches to individual prospects, increasing the chances of conversion. Moreover, our in-house database of 400 million verified contacts provides a reliable and robust foundation for lead generation.",
         },
         {
-          question: "What's something that you don't understand?",
+          question: "How accurate is the contact information in MagicPitch's database?",
           answer:
-            "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+            "We take data accuracy seriously. MagicPitch maintains a comprehensive and constantly updated database of contacts. We ensure the accuracy of our data through a rigorous verification process, minimizing the presence of outdated or incorrect information.",
         },
       ],
       [
         {
-          question: "What's an example of when you changed your mind?",
+          question: "Can MagicPitch target specific industries or job titles for lead generation?",
           answer:
-            "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+            "Absolutely! MagicPitch offers the flexibility to target specific industries, job titles, or other criteria based on your business requirements. Our advanced AI algorithms can help narrow down the target audience to ensure precision in lead generation and sales efforts.",
         },
         {
-          question: 'What is something that you would like to try again?',
+          question: 'How does MagicPitch personalize pitches for B2B prospects?',
           answer:
-            "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+            "Our AI algorithms analyze available data to gain insights into the interests, preferences, and behavior of individual prospects. This information enables us to create personalized pitches and messages tailored to resonate with each prospect, increasing engagement and conversion rates.",
         },
         {
-          question: 'If you could only ask one question to each person you meet, what would that question be?',
+          question: 'How does MagicPitch measure the success of lead generation campaigns?',
           answer:
-            "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+            "MagicPitch provides comprehensive reporting and analytics to measure the success of lead generation campaigns. We track key metrics such as conversion rates, engagement levels, and ROI to provide insights into the effectiveness of our strategies and help optimize future campaigns.",
         },
       ],
     ]}
@@ -310,10 +292,10 @@ const meta = {
 
   <Stats
     items={[
-      { name: 'Downloads', value: '132K' },
-      { name: 'Stars', value: '24.8K' },
-      { name: 'Forks', value: '10.3K' },
-      { name: 'Users', value: '48.4K' },
+      { name: 'Users', value: '10000+' },
+      { name: 'Feedback', value: '3000+' },
+      { name: 'Hours of support', value: '7000+' },
+      { name: 'Reviews', value: '5000+' },
     ]}
   />
 
@@ -326,9 +308,7 @@ const meta = {
       icon: 'tabler:download',
     }}
   >
-    <Fragment slot="title">
-      Astro + <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
+
 
     <Fragment slot="subtitle">
       Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
