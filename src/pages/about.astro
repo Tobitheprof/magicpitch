@@ -1,0 +1,301 @@
+---
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+// import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+// import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout {meta}>
+  <!-- Hero Widget ******************* -->
+
+  
+  <!-- Note Widget ******************* -->
+
+  <!-- <Note /> -->
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    highlight="About Us"
+    title="What do we do at MagicPitch?"
+    subtitle="What makes us, us?"
+    items={[
+      [
+        {
+          title: 'Lead Generation',
+          description:
+            'Through the use of our expansive database and sophisticated AI algorithms, we provide high-quality, laser-targeted leads to power your sales funnel.',
+          icon: 'tabler:brand-tailwind',
+        },
+        {
+          title: 'Sales Prospecting',
+          description:
+            'Our account-based prospecting service allows you to connect directly with decision-makers through hyper-personalized engagements on various platforms.',
+          icon: 'tabler:report-analytics',
+        },
+        {
+          title: 'Content Marketing',
+          description:
+            'With our engaging blog posts and YouTube videos, we attract and hold the attention of a broader audience for your products.',
+          icon: 'tabler:list-check',
+        },
+      ],
+      [
+        {
+          title: 'Intent Data Analysis',
+          description:
+            'Tap into the power of intent data. We use real-time intent data to personalize your prospecting efforts, connecting you with businesses exactly when they need your product.',
+          icon: 'tabler:chart-donut-3',
+        },
+        
+      ],
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    highlight="What we do"
+    title="And how we do it ..."
+    items={[
+      {
+        title: 'Data-driven approach',
+        description:
+          'We believe in harnessing the power of data to drive business growth. Our in-house database of 400 million verified contacts serves as the foundation for our lead generation and sales strategies. By analyzing and utilizing this data effectively, we provide valuable insights and opportunities to our clients.',
+      },
+      {
+        title: 'Hyper-personalization',
+        description:
+        'We understand that personalized interactions are crucial for successful B2B sales. Our advanced AI algorithms enable us to create highly customized pitches and tailored messaging for each prospect. By delivering personalized content, we help businesses establish meaningful connections with their target audience and increase conversion rates.',
+      },
+      {
+        title: 'Empowering businesses',
+        description:
+          'We aim to empower businesses by unlocking the potential of their data. Through our data-driven strategies, we help companies identify high-quality leads, optimize sales processes, and achieve tangible results. By providing businesses with the tools and knowledge they need, we enable them to make informed decisions and drive growth.',
+      },
+    ]}
+    image={{
+      src: import('~/assets/images/caos.jpg'),
+      alt: 'Colorful Image',
+    }}
+  >
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Verfied and Trusted',
+      },
+      {
+        title: '10000+ Users',
+      },
+      {
+        title: 'Delivering Value',
+      },
+      {
+        title: 'Empower Businesses',
+      },
+      {
+        title: 'Fast Delivery',
+      },
+      {
+        title: 'Top Pick',
+      },
+    ]}
+    image={{
+      src: import('~/assets/images/vintage.jpg'),
+      alt: 'Vintage Image',
+    }}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Get your business aup and running with MagicPitch"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Sign Up</span>',
+        description:
+          'taking advantage of the awesome tools MagicPitch brings to you all starts by signing up.',
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Update Information</em>',
+        description:
+          'Next thing to do is to update all of your business information and sit back while our system handles the rest.',
+        icon: 'tabler:letter-case',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">You\'re all set</span>',
+        description:
+          'And that\'s a wrap. You\'re set to take full advantage of magic pitch',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Ready!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: import('~/assets/images/creativity.jpg'),
+      alt: 'Steps image',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <!-- <Features2
+    title="Most used widgets"
+    subtitle="Provides frequently used components for building websites using Tailwind CSS"
+    highlight="Components"
+    items={[
+      {
+        title: 'Headers',
+        description:
+          'In general, Headers contain information that makes it easier for visitors to interact with the website.',
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Heros',
+        description:
+          'If you want your website to get more than its fair share of visitors, the Hero section needs to be stellar.',
+        icon: 'flat-color-icons:gallery',
+      },
+      {
+        title: 'Features',
+        description:
+          'Display your product in action and how the Features actually create a solution for your target customer.',
+        icon: 'flat-color-icons:todo-list',
+      },
+      {
+        title: 'Content',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Call-to-Action',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+        icon: 'flat-color-icons:advertising',
+      },
+      {
+        title: 'Pricing',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+        icon: 'flat-color-icons:currency-exchange',
+      },
+      {
+        title: 'Testimonial',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+      {
+        title: 'Contact',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+        icon: 'flat-color-icons:business-contact',
+      },
+      {
+        title: 'Footers',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+        icon: 'icon-park:page-template',
+      },
+    ]}
+  /> -->
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  
+
+  <!-- FAQs Widget ******************* -->
+  <FAQs
+    title="Frequently Asked Questions"
+    subtitle="Check out some of the most asked questions here on MagicPitch"
+    highlight="FAQs"
+    items={[
+      [
+        {
+          question: 'How does MagicPitch generate B2B leads?',
+          answer:
+            'MagicPitch generates B2B leads through a combination of our vast in-house database of verified contacts and advanced AI algorithms. We analyze the data to identify and target high-quality leads based on specific criteria and deliver personalized pitches to engage with them effectively.',
+        },
+        {
+          question: 'What sets MagicPitch apart from other lead generation services?',
+          answer:
+            "MagicPitch stands out due to our hyper-personalized approach and extensive database. Our AI algorithms allow us to tailor messaging and pitches to individual prospects, increasing the chances of conversion. Moreover, our in-house database of 400 million verified contacts provides a reliable and robust foundation for lead generation.",
+        },
+        {
+          question: "How accurate is the contact information in MagicPitch's database?",
+          answer:
+            "We take data accuracy seriously. MagicPitch maintains a comprehensive and constantly updated database of contacts. We ensure the accuracy of our data through a rigorous verification process, minimizing the presence of outdated or incorrect information.",
+        },
+      ],
+      [
+        {
+          question: "Can MagicPitch target specific industries or job titles for lead generation?",
+          answer:
+            "Absolutely! MagicPitch offers the flexibility to target specific industries, job titles, or other criteria based on your business requirements. Our advanced AI algorithms can help narrow down the target audience to ensure precision in lead generation and sales efforts.",
+        },
+        {
+          question: 'How does MagicPitch personalize pitches for B2B prospects?',
+          answer:
+            "Our AI algorithms analyze available data to gain insights into the interests, preferences, and behavior of individual prospects. This information enables us to create personalized pitches and messages tailored to resonate with each prospect, increasing engagement and conversion rates.",
+        },
+        {
+          question: 'How does MagicPitch measure the success of lead generation campaigns?',
+          answer:
+            "MagicPitch provides comprehensive reporting and analytics to measure the success of lead generation campaigns. We track key metrics such as conversion rates, engagement levels, and ROI to provide insights into the effectiveness of our strategies and help optimize future campaigns.",
+        },
+      ],
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    items={[
+      { name: 'Users', value: '10000+' },
+      { name: 'Feedback', value: '3000+' },
+      { name: 'Hours of support', value: '7000+' },
+      { name: 'Reviews', value: '5000+' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <!-- <CallToAction
+    callToAction={{
+      text: 'Get template',
+      href: 'https://github.com/onwidget/astrowind',
+      icon: 'tabler:download',
+    }}
+  > -->
+
+
+    <!-- <Fragment slot="subtitle">
+      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
+      waste more time! :P
+    </Fragment> -->
+  </CallToAction>
+</Layout>

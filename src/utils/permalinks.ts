@@ -71,7 +71,9 @@ export const getHomePermalink = (): string => getPermalink('/');
 export const getBlogPermalink = (): string => getPermalink(BLOG_BASE);
 
 
-export const getAboutPermalink = (): string =>  getPermalink('/pages/about.astro');
+export const getAboutPermalink = (): string =>  getPermalink('/about');
+export const getContactPermalink = (): string =>  getPermalink('/contact');
+
 
 /** */
 export const getAsset = (path: string): string =>

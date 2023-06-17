@@ -1,4 +1,4 @@
-import { getPermalink,  getAsset } from './utils/permalinks';
+import { getPermalink,  getAsset, getAboutPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -26,7 +26,7 @@ export const headerData = {
     // },
     {
       text: 'About Us',
-      href: "#",
+      href: getAboutPermalink(),
     },
     {
       text: "Contact Us",
